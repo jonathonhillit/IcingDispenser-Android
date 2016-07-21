@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MAIN ANDROID MANIFEST -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="nz.ac.aut.engineering.icingprinter">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-sdk android:minSdkVersion="18"
+        android:targetSdkVersion="21"
+        android:maxSdkVersion="22" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".IntroScreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Draw"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ImageLoad"
+            android:label="@string/title_activity_image_load"
+            android:parentActivityName=".Draw">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="nz.ac.aut.engineering.icingprinter.Draw" />
+        </activity>
+        <activity
+            android:name=".Load"
+            android:label="@string/title_activity_load"
+            android:parentActivityName=".Draw">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="nz.ac.aut.engineering.icingprinter.Draw" />
+        </activity>
+        <activity
+            android:name=".Preview"
+            android:parentActivityName=".Draw">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="nz.ac.aut.engineering.icingprinter.Draw" />
+        </activity>
+        <activity
+            android:name=".Connect"
+            android:label="@string/title_activity_connect"
+            android:parentActivityName=".Preview">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="nz.ac.aut.engineering.icingprinter.Preview" />
+        </activity>
+
+        <service android:name=".BluetoothLeService" android:enabled="true"/>
+    </application>
+
+</manifest>

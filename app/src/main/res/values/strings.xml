@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">IcingPrinter</string>
+    <string name="title_activity_draw_screen">Draw</string>
+
+    <string name="start_new">New</string>
+    <string name="brush">Brush</string>
+    <string name="erase">Erase</string>
+    <string name="save">Save</string>
+    <string name="print">Print</string>
+    <string name="resize">Resize</string>
+    <string name="crop">Crop</string>
+    <string name="paint">Paint</string>
+    <string name="sml">Small</string>
+    <string name="med">Medium</string>
+    <string name="lrg">Large</string>
+    <string name="title_activity_image_load">Image Format</string>
+    <string name="title_activity_load">Load</string>
+    <string name="title_activity_preview">Preview</string>
+
+    <string name="ble_not_supported">BLE is not supported</string>
+    <string name="label_data">Data:</string>
+    <string name="label_device_address">Device address:</string>
+    <string name="label_state">State:</string>
+    <string name="no_data">No data</string>
+    <string name="connected">Connected</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="title_devices">BLE Device Scan</string>
+    <string name="error_bluetooth_not_supported">Bluetooth not supported.</string>
+    <string name="unknown_device">Unknown device</string>
+    <string name="unknown_characteristic">Unknown characteristic</string>
+    <string name="unknown_service">Unknown service</string>
+
+    <string name="algorithm_prompt">Choose Algorithm</string>
+
+    <string-array name="algorithms">
+        <item>Floyd-Steinberg</item>
+        <item>Jarvis-Judice-Ninke</item>
+        <item>Atkinson</item>
+        <item>Sierra</item>
+    </string-array>
+    <string name="title_activity_connect">Connect</string>
+
+
+</resources>
